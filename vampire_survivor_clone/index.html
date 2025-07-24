@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survivor Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top level UI elements for health/experience and level display -->
+    <div id="ui">
+        <div id="health-bar" class="bar">
+            <div id="health-fill" class="fill"></div>
+        </div>
+        <div id="exp-bar" class="bar">
+            <div id="exp-fill" class="fill"></div>
+        </div>
+        <div id="level-display" class="level-display">Lv&nbsp;<span id="level-number">1</span></div>
+    </div>
+
+    <!-- Game canvas -->
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <!-- Panel shown on level up. Contains selectable choices for skills -->
+    <div id="level-up-panel" class="panel hidden">
+        <div class="panel-title">Level Up!</div>
+        <div id="choices" class="choices"></div>
+    </div>
+
+    <!-- Panel shown when the player dies -->
+    <div id="game-over-panel" class="panel hidden">
+        <div class="panel-title">Game Over</div>
+        <button id="restart-btn" class="btn">Restart</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
